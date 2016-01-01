@@ -1,0 +1,299 @@
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x04B3
+7470>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+WebDriverException
+_______ ERROR at setup of TestPartnerships.test_image_srcs_are_correct ________
+
+request = <SubRequest 'selenium' for <Function 'test_image_srcs_are_correct'>>
+capabilities = {'tags': ['bedrock']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+c:\python27\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+c:\python27\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __i
+nit__
+    self.binary, timeout),
+c:\python27\lib\site-packages\selenium\webdriver\firefox\extension_connection.py
+:49: in __init__
+    self.binary.launch_browser(self.profile)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68: i
+n launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x0480
+5C50>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+WebDriverException
+_______ ERROR at setup of TestPartnerships.test_partner_form_is_visible _______
+
+request = <SubRequest 'selenium' for <Function 'test_partner_form_is_visible'>>
+capabilities = {'tags': ['bedrock']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+c:\python27\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+c:\python27\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __i
+nit__
+    self.binary, timeout),
+c:\python27\lib\site-packages\selenium\webdriver\firefox\extension_connection.py
+:49: in __init__
+    self.binary.launch_browser(self.profile)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68: i
+n launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x044D
+EF30>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+WebDriverException
+______________ ERROR at setup of TestPrivacy.test_footer_section ______________
+
+request = <SubRequest 'selenium' for <Function 'test_footer_section'>>
+capabilities = {'tags': ['bedrock']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+c:\python27\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+c:\python27\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __i
+nit__
+    self.binary, timeout),
+c:\python27\lib\site-packages\selenium\webdriver\firefox\extension_connection.py
+:49: in __init__
+    self.binary.launch_browser(self.profile)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68: i
+n launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x0480
+5F10>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+WebDriverException
+______________ ERROR at setup of TestPrivacy.test_page_sections _______________
+
+request = <SubRequest 'selenium' for <Function 'test_page_sections'>>
+capabilities = {'tags': ['bedrock']}
+
+    @pytest.fixture
+    def selenium(request, capabilities):
+        """Returns a WebDriver instance based on options and capabilities"""
+        from .driver import start_driver
+>       driver = start_driver(request.node, capabilities)
+
+c:\python27\lib\site-packages\pytest_selenium\pytest_selenium.py:75:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\pytest_selenium\driver.py:26: in start_driver
+    options.driver.lower()))(item, _capabilities)
+c:\python27\lib\site-packages\pytest_selenium\driver.py:66: in firefox_driver
+    return webdriver.Firefox(**kwargs)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\webdriver.py:77: in __i
+nit__
+    self.binary, timeout),
+c:\python27\lib\site-packages\selenium\webdriver\firefox\extension_connection.py
+:49: in __init__
+    self.binary.launch_browser(self.profile)
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:68: i
+n launch_browser
+    self._wait_until_connectable()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.firefox.firefox_binary.FirefoxBinary object at 0x032D
+B330>
+
+    def _wait_until_connectable(self):
+        """Blocks until the extension is connectable in the firefox."""
+        count = 0
+        while not utils.is_connectable(self.profile.port):
+            if self.process.poll() is not None:
+                # Browser has exited
+                raise WebDriverException("The browser appears to have exited "
+                      "before we could connect. If you specified a log_file in "
+
+                      "the FirefoxBinary constructor, check it for details.")
+            if count == 30:
+                self.kill()
+>               raise WebDriverException("Can't load the profile. Profile "
+                      "Dir: %s If you specified a log_file in the "
+                      "FirefoxBinary constructor, check it for details.")
+E               WebDriverException: Message: Can't load the profile. Profile Dir
+: %s If you specified a log_file in the FirefoxBinary constructor, check it for
+details.
+
+c:\python27\lib\site-packages\selenium\webdriver\firefox\firefox_binary.py:103:
+WebDriverException
+=========================== short test summary info ===========================
+ERROR tests/test_about.py::TestAboutPage::()::test_footer_link_destinations_are_
+correct
+ERROR tests/test_about.py::TestAboutPage::()::test_footer_links_are_valid
+ERROR tests/test_about.py::TestAboutPage::()::test_major_link_destinations_are_c
+orrect
+ERROR tests/test_about.py::TestAboutPage::()::test_major_link_urls_are_valid
+ERROR tests/test_about.py::TestAboutPage::()::test_sign_up_form_links
+ERROR tests/test_contact.py::TestContact::()::test_spaces_links_are_correct
+ERROR tests/test_contact.py::TestContact::()::test_region_links_are_correct
+ERROR tests/test_contact.py::TestContact::()::test_region_legend_links_are_corre
+ct
+ERROR tests/test_contribute.py::TestContribute::()::test_footer_section
+ERROR tests/test_contribute.py::TestContribute::()::test_major_link_destinations
+_are_correct
+ERROR tests/test_contribute.py::TestContribute::()::test_major_link_urls_are_val
+id
+ERROR tests/test_dnt.py::TestDoNotTrack::()::test_footer_section
+ERROR tests/test_dnt.py::TestDoNotTrack::()::test_status_section
+ERROR tests/test_home.py::TestHomePage::()::test_promo_links_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_major_link_urls_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_major_link_destinations_are_cor
+rect
+ERROR tests/test_home.py::TestHomePage::()::test_footer_link_destinations_are_co
+rrect
+ERROR tests/test_home.py::TestHomePage::()::test_footer_links_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_sign_up_form_links
+ERROR tests/test_mission.py::TestMission::()::test_major_link_destinations_are_c
+orrect
+ERROR tests/test_mission.py::TestMission::()::test_major_link_urls_are_valid
+ERROR tests/test_mission.py::TestMission::()::test_video_srcs_are_valid
+ERROR tests/test_mission.py::TestMission::()::test_footer_section
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_breadcrumbs
+_link_destinations_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_breadcrumbs
+_link_urls_are_valid
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_main_featur
+e_link_destinations_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_main_featur
+e_link_urls_are_valid
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_featured_bi
+llboard_images_links_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_featured_im
+ages_links_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_footer_sect
+ion_links
+ERROR tests/test_nightlyfirstrun.py::TestNightlyFirstRun::()::test_footer_link_d
+estinations_are_correct
+ERROR tests/test_nightlyfirstrun.py::TestNightlyFirstRun::()::test_footer_links_
+are_valid
+ERROR tests/test_partners.py::TestPartners::()::test_footer_section
+ERROR tests/test_partners.py::TestPartners::()::test_overview_section_image
+ERROR tests/test_partners.py::TestPartners::()::test_os_section
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_section_link_destin
+ations_are_correct
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_section_link_urls_a
+re_valid
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_image_srcs_are_corr
+ect
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_partner_form_is_vis
+ible
+ERROR tests/test_privacy.py::TestPrivacy::()::test_footer_section
+ERROR tests/test_privacy.py::TestPrivacy::()::test_page_sections
+=================== 408 passed, 41 error in 2797.13 seconds ===================
+
