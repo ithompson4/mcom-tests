@@ -1,0 +1,276 @@
+            [sys.executable, 'setup.py', 'bdist_wheel', '--universal', '--python
+-tag=py32'],
+>           cwd=str(temp_pkg))
+
+Lib\site-packages\wheel\test\test_tagopt.py:69:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+popenargs = (['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel', '--universa
+l', '--python-tag=py32'],)
+kwargs = {'cwd': 'c:\\users\\michael\\appdata\\local\\temp\\tmpht3f0q'}
+retcode = 1
+cmd = ['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel', '--universal', '--
+python-tag=py32']
+
+    def check_call(*popenargs, **kwargs):
+        """Run command with arguments.  Wait for command to complete.  If
+        the exit code was zero then return, otherwise raise
+        CalledProcessError.  The CalledProcessError object will have the
+        return code in the returncode attribute.
+
+        The arguments are the same as for the Popen constructor.  Example:
+
+        check_call(["ls", "-l"])
+        """
+        retcode = call(*popenargs, **kwargs)
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+>           raise CalledProcessError(retcode, cmd)
+E           CalledProcessError: Command '['c:\\python27\\python.exe', 'setup.py'
+, 'bdist_wheel', '--universal', '--python-tag=py32']' returned non-zero exit sta
+tus 1
+
+c:\python27\lib\subprocess.py:540: CalledProcessError
+---------------------------- Captured stderr call -----------------------------
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'bdist_wheel'
+_________________________ test_universal_in_setup_cfg _________________________
+
+temp_pkg = local('c:\\users\\michael\\appdata\\local\\temp\\tmp7av6ry')
+
+    def test_universal_in_setup_cfg(temp_pkg):
+        temp_pkg.join('setup.cfg').write('[bdist_wheel]\nuniversal=1')
+        subprocess.check_call(
+            [sys.executable, 'setup.py', 'bdist_wheel'],
+>           cwd=str(temp_pkg))
+
+Lib\site-packages\wheel\test\test_tagopt.py:81:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+popenargs = (['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel'],)
+kwargs = {'cwd': 'c:\\users\\michael\\appdata\\local\\temp\\tmp7av6ry'}
+retcode = 1, cmd = ['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel']
+
+    def check_call(*popenargs, **kwargs):
+        """Run command with arguments.  Wait for command to complete.  If
+        the exit code was zero then return, otherwise raise
+        CalledProcessError.  The CalledProcessError object will have the
+        return code in the returncode attribute.
+
+        The arguments are the same as for the Popen constructor.  Example:
+
+        check_call(["ls", "-l"])
+        """
+        retcode = call(*popenargs, **kwargs)
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+>           raise CalledProcessError(retcode, cmd)
+E           CalledProcessError: Command '['c:\\python27\\python.exe', 'setup.py'
+, 'bdist_wheel']' returned non-zero exit status 1
+
+c:\python27\lib\subprocess.py:540: CalledProcessError
+---------------------------- Captured stderr call -----------------------------
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'bdist_wheel'
+_________________________ test_pythontag_in_setup_cfg _________________________
+
+temp_pkg = local('c:\\users\\michael\\appdata\\local\\temp\\tmpg9ogrr')
+
+    def test_pythontag_in_setup_cfg(temp_pkg):
+        temp_pkg.join('setup.cfg').write('[bdist_wheel]\npython_tag=py32')
+        subprocess.check_call(
+            [sys.executable, 'setup.py', 'bdist_wheel'],
+>           cwd=str(temp_pkg))
+
+Lib\site-packages\wheel\test\test_tagopt.py:93:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+popenargs = (['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel'],)
+kwargs = {'cwd': 'c:\\users\\michael\\appdata\\local\\temp\\tmpg9ogrr'}
+retcode = 1, cmd = ['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel']
+
+    def check_call(*popenargs, **kwargs):
+        """Run command with arguments.  Wait for command to complete.  If
+        the exit code was zero then return, otherwise raise
+        CalledProcessError.  The CalledProcessError object will have the
+        return code in the returncode attribute.
+
+        The arguments are the same as for the Popen constructor.  Example:
+
+        check_call(["ls", "-l"])
+        """
+        retcode = call(*popenargs, **kwargs)
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+>           raise CalledProcessError(retcode, cmd)
+E           CalledProcessError: Command '['c:\\python27\\python.exe', 'setup.py'
+, 'bdist_wheel']' returned non-zero exit status 1
+
+c:\python27\lib\subprocess.py:540: CalledProcessError
+---------------------------- Captured stderr call -----------------------------
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'bdist_wheel'
+___________________ test_legacy_wheel_section_in_setup_cfg ____________________
+
+temp_pkg = local('c:\\users\\michael\\appdata\\local\\temp\\tmplt6jmj')
+
+    def test_legacy_wheel_section_in_setup_cfg(temp_pkg):
+        temp_pkg.join('setup.cfg').write('[wheel]\nuniversal=1')
+        subprocess.check_call(
+            [sys.executable, 'setup.py', 'bdist_wheel'],
+>           cwd=str(temp_pkg))
+
+Lib\site-packages\wheel\test\test_tagopt.py:105:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+popenargs = (['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel'],)
+kwargs = {'cwd': 'c:\\users\\michael\\appdata\\local\\temp\\tmplt6jmj'}
+retcode = 1, cmd = ['c:\\python27\\python.exe', 'setup.py', 'bdist_wheel']
+
+    def check_call(*popenargs, **kwargs):
+        """Run command with arguments.  Wait for command to complete.  If
+        the exit code was zero then return, otherwise raise
+        CalledProcessError.  The CalledProcessError object will have the
+        return code in the returncode attribute.
+
+        The arguments are the same as for the Popen constructor.  Example:
+
+        check_call(["ls", "-l"])
+        """
+        retcode = call(*popenargs, **kwargs)
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+>           raise CalledProcessError(retcode, cmd)
+E           CalledProcessError: Command '['c:\\python27\\python.exe', 'setup.py'
+, 'bdist_wheel']' returned non-zero exit status 1
+
+c:\python27\lib\subprocess.py:540: CalledProcessError
+---------------------------- Captured stderr call -----------------------------
+usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+   or: setup.py --help [cmd1 cmd2 ...]
+   or: setup.py --help-commands
+   or: setup.py cmd --help
+
+error: invalid command 'bdist_wheel'
+_________________________________ test_keygen _________________________________
+
+    def test_keygen():
+        def get_keyring():
+            WheelKeys, keyring = tool.get_keyring()
+
+            class WheelKeysTest(WheelKeys):
+                def save(self):
+                    pass
+
+            class keyringTest:
+                backend = keyring.backend
+                class backends:
+                    file = keyring.backends.file
+                @classmethod
+                def get_keyring(cls):
+                    class keyringTest2:
+                        pw = None
+                        def set_password(self, a, b, c):
+                            self.pw = c
+                        def get_password(self, a, b):
+                            return self.pw
+
+                    return keyringTest2()
+
+            return WheelKeysTest, keyringTest
+
+>       tool.keygen(get_keyring=get_keyring)
+
+Lib\site-packages\wheel\test\test_tool.py:28:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+Lib\site-packages\wheel\tool\__init__.py:38: in keygen
+    WheelKeys, keyring = get_keyring()
+Lib\site-packages\wheel\test\test_tool.py:5: in get_keyring
+    WheelKeys, keyring = tool.get_keyring()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def get_keyring():
+        try:
+            from ..signatures import keys
+            import keyring
+        except ImportError:
+>           raise WheelError("Install wheel[signatures] (requires keyring, pyxdg
+) for signatures.")
+E           WheelError: Install wheel[signatures] (requires keyring, pyxdg) for
+signatures.
+
+Lib\site-packages\wheel\tool\__init__.py:33: WheelError
+=========================== short test summary info ===========================
+FAIL Lib/site-packages/wheel/test/test_basic.py::test_pydist
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_default_tag
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_explicit_tag
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_universal_tag
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_universal_beats_explicit_tag
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_universal_in_setup_cfg
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_pythontag_in_setup_cfg
+FAIL Lib/site-packages/wheel/test/test_tagopt.py::test_legacy_wheel_section_in_setup_cfg
+FAIL Lib/site-packages/wheel/test/test_tool.py::test_keygen
+
+ERROR tests/test_about.py::TestAboutPage::()::test_footer_link_destinations_are_correct
+ERROR tests/test_about.py::TestAboutPage::()::test_footer_links_are_valid
+ERROR tests/test_about.py::TestAboutPage::()::test_major_link_destinations_are_correct
+ERROR tests/test_about.py::TestAboutPage::()::test_major_link_urls_are_valid
+ERROR tests/test_about.py::TestAboutPage::()::test_sign_up_form_links
+ERROR tests/test_contact.py::TestContact::()::test_spaces_links_are_correct
+ERROR tests/test_contact.py::TestContact::()::test_region_links_are_correct
+ERROR tests/test_contact.py::TestContact::()::test_region_legend_links_are_correct
+ERROR tests/test_contribute.py::TestContribute::()::test_footer_section
+ERROR tests/test_contribute.py::TestContribute::()::test_major_link_destinations_are_correct
+ERROR tests/test_contribute.py::TestContribute::()::test_major_link_urls_are_valid
+ERROR tests/test_dnt.py::TestDoNotTrack::()::test_footer_section
+ERROR tests/test_dnt.py::TestDoNotTrack::()::test_status_section
+ERROR tests/test_home.py::TestHomePage::()::test_promo_links_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_major_link_urls_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_major_link_destinations_are_correct
+ERROR tests/test_home.py::TestHomePage::()::test_footer_link_destinations_are_correct
+ERROR tests/test_home.py::TestHomePage::()::test_footer_links_are_valid
+ERROR tests/test_home.py::TestHomePage::()::test_sign_up_form_links
+ERROR tests/test_mission.py::TestMission::()::test_major_link_destinations_are_correct
+ERROR tests/test_mission.py::TestMission::()::test_major_link_urls_are_valid
+ERROR tests/test_mission.py::TestMission::()::test_video_srcs_are_valid
+ERROR tests/test_mission.py::TestMission::()::test_footer_section
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_breadcrumbs_link_destinations_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_breadcrumbs_link_urls_are_valid
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_main_feature_link_destinations_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_main_feature_link_urls_are_valid
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_featured_billboard_images_links_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_featured_images_links_are_correct
+ERROR tests/test_mozillabased.py::TestMozillaBasedPagePage::()::test_footer_section_links
+ERROR tests/test_nightlyfirstrun.py::TestNightlyFirstRun::()::test_footer_link_destinations_are_correct
+ERROR tests/test_nightlyfirstrun.py::TestNightlyFirstRun::()::test_footer_links_are_valid
+ERROR tests/test_partners.py::TestPartners::()::test_footer_section
+ERROR tests/test_partners.py::TestPartners::()::test_overview_section_image
+ERROR tests/test_partners.py::TestPartners::()::test_os_section
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_section_link_destinations_are_correct
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_section_link_urls_are_valid
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_image_srcs_are_correct
+ERROR tests/test_partnerships.py::TestPartnerships::()::test_partner_form_is_visible
+ERROR tests/test_privacy.py::TestPrivacy::()::test_footer_section
+ERROR tests/test_privacy.py::TestPrivacy::()::test_page_sections
+============== 9 failed, 427 passed, 41 error in 2675.19 seconds ==============
+
